@@ -21,6 +21,8 @@ def create_file(path, extension)
 end
 
 
+# find . -maxdepth 1 -type f | xargs git add
+
 desc "dircommit file"
 task :dircommit do
 	commitdir = "dircommit"
@@ -39,8 +41,6 @@ task :dircommit do
 				puts "\n## Pushing generated #{cmdir} website"
 				Bundler.with_clean_env { system "git push origin master" }
 				puts "\n## Github Pages deploy complete"
-				# FileUtils.cd(x) do |dir|  # chdir
-				# end
 			end
 		}
 		puts "\n add directory #{commitdir}"
