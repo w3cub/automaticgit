@@ -1,4 +1,4 @@
-# automaticgit-test
+# automaticgit
 
 
 Git分步提交
